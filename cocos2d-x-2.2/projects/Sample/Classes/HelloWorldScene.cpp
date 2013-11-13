@@ -1,6 +1,8 @@
 #include "HelloWorldScene.h"
+#include "GassusianBlur.h"
 
 USING_NS_CC;
+USING_NS_S2;
 
 CCScene* HelloWorld::scene()
 {
@@ -73,6 +75,9 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
     
+    
+    pSprite->runAction(cocos2d::CCEaseOut::create(GaussianBlur::create(2.0, 0, 30), 0.3));
+
     return true;
 }
 
