@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>588815EB-C3B5-4040-9DD5-F16F47868FDE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>651DC9D8-1D5D-4D11-9303-F9C75654A35A</key>
+		<string>https://github.com/tsuyoshi89/cocos2d-x-sample/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cocos2d-x-2.2/projects/Sample/proj.ios/Sample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>651DC9D8-1D5D-4D11-9303-F9C75654A35A</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>651DC9D8-1D5D-4D11-9303-F9C75654A35A</key>
+		<string>https://github.com/tsuyoshi89/cocos2d-x-sample</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tsuyoshi89/cocos2d-x-sample/trunk/cocos2d-x-2.2/projects/Sample/proj.ios/Sample.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>651DC9D8-1D5D-4D11-9303-F9C75654A35A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>651DC9D8-1D5D-4D11-9303-F9C75654A35A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos2d-x-sample</string>
+		</dict>
+	</array>
+</dict>
+</plist>
