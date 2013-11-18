@@ -233,6 +233,8 @@
 		379BB9D217F03F3700829B88 /* sconscript in Resources */ = {isa = PBXBuildFile; fileRef = 379BB98D17F03F3700829B88 /* sconscript */; };
 		379BB9D317F03F3700829B88 /* CCSGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99117F03F3700829B88 /* CCSGUIReader.cpp */; };
 		379BB9D417F03F3700829B88 /* CCSSceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* CCSSceneReader.cpp */; };
+		48C850D5183A19AA00F4448B /* ClippingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C850D3183A19AA00F4448B /* ClippingNode.cpp */; };
+		48C850D9183A201A00F4448B /* ResizeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C850D7183A201A00F4448B /* ResizeAction.cpp */; };
 		48DB35831833DFBE0092D97D /* ImageFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48DB35811833DFBE0092D97D /* ImageFilter.cpp */; };
 		48DB35871833E2F80092D97D /* MutableTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48DB35851833E2F80092D97D /* MutableTexture2D.cpp */; };
 		48DB358A1833F3CB0092D97D /* GassusianBlur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48DB35881833F3CB0092D97D /* GassusianBlur.cpp */; };
@@ -731,6 +733,10 @@
 		379BB99217F03F3700829B88 /* CCSGUIReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSGUIReader.h; sourceTree = "<group>"; };
 		379BB99317F03F3700829B88 /* CCSSceneReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSSceneReader.cpp; sourceTree = "<group>"; };
 		379BB99417F03F3700829B88 /* CCSSceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSSceneReader.h; sourceTree = "<group>"; };
+		48C850D3183A19AA00F4448B /* ClippingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClippingNode.cpp; path = ../Classes/ClippingNode.cpp; sourceTree = "<group>"; };
+		48C850D4183A19AA00F4448B /* ClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClippingNode.h; path = ../Classes/ClippingNode.h; sourceTree = "<group>"; };
+		48C850D7183A201A00F4448B /* ResizeAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResizeAction.cpp; path = ../Classes/ResizeAction.cpp; sourceTree = "<group>"; };
+		48C850D8183A201A00F4448B /* ResizeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResizeAction.h; path = ../Classes/ResizeAction.h; sourceTree = "<group>"; };
 		48DB35811833DFBE0092D97D /* ImageFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageFilter.cpp; path = ../Classes/ImageFilter.cpp; sourceTree = "<group>"; };
 		48DB35821833DFBE0092D97D /* ImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFilter.h; path = ../Classes/ImageFilter.h; sourceTree = "<group>"; };
 		48DB35841833E23F0092D97D /* s2_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = s2_common.h; path = ../Classes/s2_common.h; sourceTree = "<group>"; };
@@ -1273,6 +1279,8 @@
 			children = (
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
+				48C850D3183A19AA00F4448B /* ClippingNode.cpp */,
+				48C850D4183A19AA00F4448B /* ClippingNode.h */,
 				48DB35811833DFBE0092D97D /* ImageFilter.cpp */,
 				48DB35821833DFBE0092D97D /* ImageFilter.h */,
 				48DB35851833E2F80092D97D /* MutableTexture2D.cpp */,
@@ -1282,6 +1290,8 @@
 				48DB35841833E23F0092D97D /* s2_common.h */,
 				48DB35881833F3CB0092D97D /* GassusianBlur.cpp */,
 				48DB35891833F3CB0092D97D /* GassusianBlur.h */,
+				48C850D7183A201A00F4448B /* ResizeAction.cpp */,
+				48C850D8183A201A00F4448B /* ResizeAction.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1879,6 +1889,7 @@
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
+				48C850D9183A201A00F4448B /* ResizeAction.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
@@ -1946,6 +1957,7 @@
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
+				48C850D5183A19AA00F4448B /* ClippingNode.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,

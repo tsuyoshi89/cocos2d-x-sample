@@ -1,5 +1,7 @@
 #include "HelloWorldScene.h"
 #include "GassusianBlur.h"
+#include "ClippingNode.h"
+#include "ResizeAction.h"
 
 USING_NS_CC;
 USING_NS_S2;
@@ -66,17 +68,36 @@ bool HelloWorld::init()
     // add the label as a child to this layer
     this->addChild(pLabel, 1);
 
+    CCSize clipSize = CCSizeMake(200, 200);
+    
+    CCNode *clippingNode = ClippingNode::create();
+    clippingNode->setContentSize(clipSize);
+    clippingNode->setAnchorPoint(ccp(0.5f, 0.5f));
+    clippingNode->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(clippingNode, 1);
+    
+
     // add "HelloWorld" splash screen"
     CCSprite* pSprite = CCSprite::create("HelloWorld.png");
 
     // position the sprite on the center of the screen
-    pSprite->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    pSprite->setPosition(ccp(clipSize.width/2, clipSize.height/2));
 
     // add the sprite as a child to this layer
-    this->addChild(pSprite, 0);
+    clippingNode->addChild(pSprite, 0);
     
+    ccBezierConfig config;
+    config.controlPoint_1 = ccp(0, 0);
+    config.controlPoint_2 = ccp(visibleSize.width, visibleSize.height);
+    config.endPosition = clippingNode->getPosition();
+    clippingNode->runAction(CCRepeatForever::create(
+                            ResizeAction::create(3.0f, pSprite->getContentSize(), CCSizeMake(10, 10)))
+                            );
+
+
+
+    pSprite->runAction(CCRepeatForever::create(cocos2d::CCEaseOut::create(GaussianBlur::create(3.0, 0, 30), 0.3)));
     
-    pSprite->runAction(cocos2d::CCEaseOut::create(GaussianBlur::create(2.0, 0, 30), 0.3));
 
     return true;
 }

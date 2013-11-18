@@ -13,7 +13,7 @@ NS_S2_BEGIN
 
 class GaussianBlur : public cocos2d::CCActionInterval {
 public:
-    // Create the action with duration and shake delta(x, y)
+    //create with effect radius
     static GaussianBlur* create(float duration, int toRadius, int fromRadius);
     
     
